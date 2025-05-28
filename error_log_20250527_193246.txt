@@ -1,0 +1,2 @@
+error: Failed to spawn: `deep_research.py`
+  Caused by: No such file or directory (os error 2)

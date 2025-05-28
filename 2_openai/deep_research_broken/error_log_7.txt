@@ -1,0 +1,315 @@
+Traceback (most recent call last):
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/queueing.py", line 625, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/route_utils.py", line 322, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/blocks.py", line 2146, in process_api
+    result = await self.call_function(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/blocks.py", line 1664, in call_function
+    prediction = await anyio.to_thread.run_sync(  # type: ignore
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/anyio/to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2470, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 967, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/utils.py", line 884, in wrapper
+    response = f(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/deep_research.py", line 58, in show_questions
+    questions = start_research(query)
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/deep_research.py", line 30, in start_research
+    return asyncio.run(get_questions())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/deep_research.py", line 25, in get_questions
+    async for chunk in gen:
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/research_manager.py", line 30, in run
+    clarifying_questions_result = await self.get_clarifying_questions(query)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/research_manager.py", line 89, in get_clarifying_questions
+    result = await Runner.run(
+                   ^^^^^^^^^^^
+TypeError: Runner.run() got an unexpected keyword argument 'agent'
+Traceback (most recent call last):
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/queueing.py", line 625, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/route_utils.py", line 322, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/blocks.py", line 2146, in process_api
+    result = await self.call_function(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/blocks.py", line 1664, in call_function
+    prediction = await anyio.to_thread.run_sync(  # type: ignore
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/anyio/to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2470, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 967, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/utils.py", line 884, in wrapper
+    response = f(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/deep_research.py", line 58, in show_questions
+    questions = start_research(query)
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/deep_research.py", line 30, in start_research
+    return asyncio.run(get_questions())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/deep_research.py", line 25, in get_questions
+    async for chunk in gen:
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/research_manager.py", line 30, in run
+    clarifying_questions_result = await self.get_clarifying_questions(query)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/research_manager.py", line 89, in get_clarifying_questions
+    result = await Runner.run(
+                   ^^^^^^^^^^^
+TypeError: Runner.run() got an unexpected keyword argument 'agent'
+Traceback (most recent call last):
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/queueing.py", line 625, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/route_utils.py", line 322, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/blocks.py", line 2146, in process_api
+    result = await self.call_function(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/blocks.py", line 1664, in call_function
+    prediction = await anyio.to_thread.run_sync(  # type: ignore
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/anyio/to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2470, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 967, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/utils.py", line 884, in wrapper
+    response = f(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/deep_research.py", line 58, in show_questions
+    questions = start_research(query)
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/deep_research.py", line 30, in start_research
+    return asyncio.run(get_questions())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/deep_research.py", line 25, in get_questions
+    async for chunk in gen:
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/research_manager.py", line 30, in run
+    clarifying_questions_result = await self.get_clarifying_questions(query)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/research_manager.py", line 89, in get_clarifying_questions
+    result = await Runner.run(
+                   ^^^^^^^^^^^
+TypeError: Runner.run() got an unexpected keyword argument 'agent'
+Traceback (most recent call last):
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/queueing.py", line 625, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/route_utils.py", line 322, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/blocks.py", line 2146, in process_api
+    result = await self.call_function(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/blocks.py", line 1664, in call_function
+    prediction = await anyio.to_thread.run_sync(  # type: ignore
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/anyio/to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2470, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 967, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/utils.py", line 884, in wrapper
+    response = f(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/deep_research.py", line 58, in show_questions
+    questions = start_research(query)
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/deep_research.py", line 30, in start_research
+    return asyncio.run(get_questions())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/deep_research.py", line 25, in get_questions
+    async for chunk in gen:
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/research_manager.py", line 30, in run
+    clarifying_questions_result = await self.get_clarifying_questions(query)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/research_manager.py", line 89, in get_clarifying_questions
+    result = await Runner.run(
+                   ^^^^^^^^^^^
+TypeError: Runner.run() got an unexpected keyword argument 'agent'
+Traceback (most recent call last):
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/queueing.py", line 625, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/route_utils.py", line 322, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/blocks.py", line 2146, in process_api
+    result = await self.call_function(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/blocks.py", line 1664, in call_function
+    prediction = await anyio.to_thread.run_sync(  # type: ignore
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/anyio/to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2470, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 967, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/utils.py", line 884, in wrapper
+    response = f(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/deep_research.py", line 58, in show_questions
+    questions = start_research(query)
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/deep_research.py", line 30, in start_research
+    return asyncio.run(get_questions())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/deep_research.py", line 25, in get_questions
+    async for chunk in gen:
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/research_manager.py", line 30, in run
+    clarifying_questions_result = await self.get_clarifying_questions(query)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/research_manager.py", line 89, in get_clarifying_questions
+    result = await Runner.run(
+                   ^^^^^^^^^^^
+TypeError: Runner.run() got an unexpected keyword argument 'agent'
+Traceback (most recent call last):
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/queueing.py", line 625, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/route_utils.py", line 322, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/blocks.py", line 2146, in process_api
+    result = await self.call_function(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/blocks.py", line 1664, in call_function
+    prediction = await anyio.to_thread.run_sync(  # type: ignore
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/anyio/to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2470, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 967, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/utils.py", line 884, in wrapper
+    response = f(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/deep_research.py", line 58, in show_questions
+    questions = start_research(query)
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/deep_research.py", line 30, in start_research
+    return asyncio.run(get_questions())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/deep_research.py", line 25, in get_questions
+    async for chunk in gen:
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/research_manager.py", line 30, in run
+    clarifying_questions_result = await self.get_clarifying_questions(query)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/research_manager.py", line 89, in get_clarifying_questions
+    planner_agent.instructions = INSTRUCTIONS_ASK_QUESTIONS
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Runner.run() got an unexpected keyword argument 'agent'
+* Running on local URL:  http://127.0.0.1:7860
+* To create a public link, set `share=True` in `launch()`.
+View trace: https://platform.openai.com/traces/trace?trace_id=trace_18868256561d4a38a3bbd98c4ea8b702
+Starting research...
+Getting clarifying questions...
+View trace: https://platform.openai.com/traces/trace?trace_id=trace_7c94af53fa2549ff86009afba594eb6b
+Starting research...
+Getting clarifying questions...
+View trace: https://platform.openai.com/traces/trace?trace_id=trace_df3394ff57104778935d5fd774b91703
+Starting research...
+Getting clarifying questions...
+View trace: https://platform.openai.com/traces/trace?trace_id=trace_6368a7be7b974ddab7c10325283698e4
+Starting research...
+Getting clarifying questions...
+View trace: https://platform.openai.com/traces/trace?trace_id=trace_527241dbb6df42d49199b11de0794a9d
+Starting research...
+Getting clarifying questions...
+View trace: https://platform.openai.com/traces/trace?trace_id=trace_93c8aed8b3264034a63f209c7117381a
+Starting research...
+Getting clarifying questions...
+Keyboard interruption in main thread... closing server.

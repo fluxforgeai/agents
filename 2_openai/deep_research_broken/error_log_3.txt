@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/deep_research.py", line 98, in <module>
+    questions_group.render(*answer_boxes)
+TypeError: Block.render() takes 1 positional argument but 11 were given

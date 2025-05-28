@@ -1,2 +1,15 @@
-My name is Ed Donner. I'm an entrepreneur, software engineer and data scientist. I'm originally from London, England, but I moved to NYC in 2000.
-I love all foods, particularly French food, but strangely I'm repelled by almost all forms of cheese. I'm not allergic, I just hate the taste! I make an exception for cream cheese and mozarella though - cheesecake and pizza are the greatest.
+🚀  Hey, I’m **Johan** — part data whisperer, part AI tamer.
+
+By sunrise I’m crunching mine‑safety data for Anglo American; by sunset I’m teaching language models to build an autonomous software agency (because pushing buttons is so 2020).
+
+### What keeps me buzzing
+• ⚙️  Automating *everything* – if a task takes more than one click, an agent’s doing it next week.  
+• 🐶  Winning over Ally, my rescue Dachshund who still thinks I’m the mailman.  
+• 🏋️‍♂️  Dropping 20 kg on a high‑protein, smoked‑short‑rib diet while lifting heavier every week.  
+• 💻  Stress‑testing Python 3.12 on a MacBook Pro M3 Max — peak geek bliss.  
+• 🚀  Moon‑shot goals: Starlink speed, $1 M revenue by 2025, and zero downtime.
+
+### Side quests
+Fixing a 2001 Jaguar rev‑limiter, colorising vintage photos, and sneaking red‑light therapy sessions between deploys. Expect code snippets, carnivore recipes, and the odd Springbok rugby hot‑take.
+
+Follow along. #AutomationOrBust

@@ -1,12 +1,11 @@
 import os
 from typing import Dict
 
+import certifi
 import sendgrid
 from sendgrid.helpers.mail import Email, Mail, Content, To
 from agents import Agent, function_tool
-import certifi
 
-# ─── add these two lines BEFORE you create the client ───
 os.environ["SSL_CERT_FILE"] = certifi.where()          # core ssl module
 os.environ["REQUESTS_CA_BUNDLE"] = certifi.where()     # requests / urllib3
 

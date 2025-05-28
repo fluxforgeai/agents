@@ -1,0 +1,131 @@
+unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-36' coro=<<async_generator_athrow without __name__>()> exception=ValueError("<Token var=<ContextVar name='current_trace' default=None at 0x11a3935b0> at 0x11d40c080> was created in a different Context")>
+Traceback (most recent call last):
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/research_manager.py", line 28, in run
+    yield {"clarifying_questions": questions_list}
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/research_manager.py", line 13, in run
+    with trace("Research trace", trace_id=trace_id):
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/agents/tracing/traces.py", line 186, in __exit__
+    self.finish(reset_current=exc_type is not GeneratorExit)
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/agents/tracing/traces.py", line 173, in finish
+    Scope.reset_current_trace(self._prev_context_token)
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/agents/tracing/scope.py", line 49, in reset_current_trace
+    _current_trace.reset(token)
+ValueError: <Token var=<ContextVar name='current_trace' default=None at 0x11a3935b0> at 0x11d40c080> was created in a different Context
+Traceback (most recent call last):
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/queueing.py", line 625, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/route_utils.py", line 322, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/blocks.py", line 2146, in process_api
+    result = await self.call_function(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/blocks.py", line 1664, in call_function
+    prediction = await anyio.to_thread.run_sync(  # type: ignore
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/anyio/to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2470, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 967, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/utils.py", line 884, in wrapper
+    response = f(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/deep_research.py", line 60, in show_report
+    return continue_research(query, answers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/deep_research.py", line 32, in continue_research
+    return asyncio.run(get_report())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/deep_research.py", line 28, in get_report
+    async for chunk in gen:
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/research_manager.py", line 32, in run
+    search_plan = await self.plan_searches(query, clarifying_answers)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/research_manager.py", line 61, in plan_searches
+    print(f"Will perform {len(result.final_output.searches)} searches")
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'searches'
+Traceback (most recent call last):
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/queueing.py", line 625, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/route_utils.py", line 322, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/blocks.py", line 2146, in process_api
+    result = await self.call_function(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/blocks.py", line 1664, in call_function
+    prediction = await anyio.to_thread.run_sync(  # type: ignore
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/anyio/to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2470, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 967, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/.venv/lib/python3.12/site-packages/gradio/utils.py", line 884, in wrapper
+    response = f(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/deep_research.py", line 60, in show_report
+    return continue_research(query, answers)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/deep_research.py", line 32, in continue_research
+    return asyncio.run(get_report())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/deep_research.py", line 28, in get_report
+    async for chunk in gen:
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/research_manager.py", line 32, in run
+    search_plan = await self.plan_searches(query, clarifying_answers)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/research_manager.py", line 61, in plan_searches
+    print(f"Will perform {len(result.final_output.searches)} searches")
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'searches'
+* Running on local URL:  http://127.0.0.1:7860
+* To create a public link, set `share=True` in `launch()`.
+View trace: https://platform.openai.com/traces/trace?trace_id=trace_fbe5cbfec6894230be140cc9ef284943
+Starting research...
+Getting clarifying questions...
+View trace: https://platform.openai.com/traces/trace?trace_id=trace_440158be9bef40f982c5bc0a9fa45a1c
+Starting research...
+Getting clarifying questions...
+Planning searches...
+View trace: https://platform.openai.com/traces/trace?trace_id=trace_b5f01ed511724c6e92141de578cccdd4
+Starting research...
+Getting clarifying questions...
+Planning searches...
+Keyboard interruption in main thread... closing server.
