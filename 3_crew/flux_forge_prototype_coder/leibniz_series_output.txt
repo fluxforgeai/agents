@@ -1,0 +1,15 @@
+--- Python Code ---
+
+def leibniz_pi(n_terms):
+    total = 0.0
+    for k in range(n_terms):
+        term = (-1)**k / (2*k + 1)
+        total += term
+    return 4 * total
+
+n_terms = 10_000
+result = leibniz_pi(n_terms)
+print(f"Approximation of pi with {{n_terms}} terms: {{result}}")
+
+--- Output ---
+Approximation of pi with 10000 terms: 3.1414926535900345
