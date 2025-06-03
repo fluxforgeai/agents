@@ -1,0 +1,24 @@
+[project]
+name = "fluxforge_engineering_team"
+version = "0.1.0"
+description = "fluxforge_engineering_team using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.121.1,<1.0.0",
+    "gradio>=5.32.1",
+]
+
+[project.scripts]
+fluxforge_engineering_team = "fluxforge_engineering_team.main:run"
+run_crew = "fluxforge_engineering_team.main:run"
+train = "fluxforge_engineering_team.main:train"
+replay = "fluxforge_engineering_team.main:replay"
+test = "fluxforge_engineering_team.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
