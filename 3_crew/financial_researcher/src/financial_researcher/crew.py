@@ -1,7 +1,11 @@
-# src/financial_researcher/crew.py
+    # src/financial_researcher/crew.py
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 from crewai_tools import SerperDevTool
+from dotenv import load_dotenv
+import os
+
+load_dotenv(os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), '.env'))
 
 @CrewBase
 class ResearchCrew():
