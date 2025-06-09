@@ -1,24 +1,58 @@
-# Dinner Report: Le Bernardin
+# Top 3 Restaurants for Dinner in Jeffreys Bay, Eastern Cape, South Africa
 
-## Restaurant Overview
-- **Name**: Le Bernardin
-- **Address**: 155 W 51st St, New York, NY 10019
-- **Phone**: (212) 554-1515
-- **Website**: [le-bernardin.com](http://le-bernardin.com)
+## 1. Tasty Table Café (Rank #1)
+**Address:** Shop 2, Hankce Building, Diaz Street, Jeffreys Bay, 6330, Eastern Cape, South Africa  
+**Phone:** 083 254 9403
 
-## Cuisine
-Le Bernardin specializes in refined seafood dishes, crafted with the utmost respect for the ingredients. The menu includes a variety of seafood preparations, with an emphasis on freshness and simplicity.
+### Overview
+Tasty Table Café is the highest-rated restaurant in Jeffreys Bay with a TripAdvisor score of 4.7/5 from over 400 reviews. It stands out for its warm hospitality, relaxed vibe, and commitment to homemade quality. It's perfect for brunch, lunch, or dinner and very popular among both locals and tourists.
 
-## Menu Highlights
-- **Tuna Tartare**: Diced raw tuna, served with toasted sesame and avocado.
-- **Wild Salmon**: Lightly cooked, served with a warm ginger-soy emulsion and bok choy.
-- **Poached Lobster**: Accompanied by truffle butter and a delicate sauce.
-- **Chocolate Soufflé**: A classic dessert, rich and airy.
+### Menu Highlights
+- Speciality Coffees
+- Burgers & Sandwiches (with gluten-free options)
+- Fresh Seafood
+- Freshly Baked Treats & Cakes
+- Vegetarian & Vegan Friendly Options
 
-## Ambiance
-The atmosphere at Le Bernardin is elegant and serene, characterized by minimalist decor and a focus on the dining experience.
+### Reviews
+- "Best cafe in Jeffreys Bay. Superb breakfasts and friendly staff!"
+- "Delicious food, nice atmosphere, and excellent coffee."
 
-## Summary of Reviews
-Le Bernardin has consistently received rave reviews for its exceptional cuisine and impeccable service. It is a three-Michelin star restaurant, recognized as one of the best seafood restaurants not only in New York but also in the world. Diners emphasize the harmonious flavors and the artistry of the dishes, making it a top choice for special occasions.
+## 2. Kitchen Windows Beach Restaurant (Rank #2)
+**Address:** 80 Ferreira Street, Dolphin Beach, Jeffreys Bay, 6330, Eastern Cape, South Africa  
+**Phone:** 042 293 4230
 
-**In conclusion**, Le Bernardin represents the pinnacle of fine dining, offering diners an unforgettable experience centered around seafood excellence.
+### Overview
+Kitchen Windows Beach Restaurant is famous for its seaside atmosphere and fresh cuisine. Highly rated (4.6/5 from 1,691 reviews), diners love its beachfront views, extensive menu, and family-friendly setting.
+
+### Menu Highlights
+- Fresh Seafood & Tapas
+- Matured Steaks
+- Pizza
+- Vegetarian & Vegan Options
+- Children’s Menu
+- Pavlova and Gourmet Milkshakes
+
+### Reviews
+- "Beautiful view, great menu choices, and excellent food."
+- "Best overall experience in J-bay. The milkshakes are amazing."
+
+## 3. Die Walskipper (Rank #3)
+**Address:** Claptons Beach, Marina Martinique, Jeffreys Bay, Eastern Cape, South Africa  
+**Phone:** 042 292 0005
+
+### Overview
+Die Walskipper is a beloved beach-shack-style seafood restaurant, known for its authentic South African cuisine cooked over open coals. With its rustic ambiance and proximity to the sand, it is especially popular for relaxed group dinners and special occasions (4.3/5 from 761 reviews).
+
+### Menu Highlights
+- Fresh Seafood Platters (crayfish, calamari, prawns, mussels, fish)
+- Traditional South African Dishes (oxtail in red wine, braaivleis, mussel soup)
+- Tapas Board for Two
+
+### Reviews
+- "Perfect setting, unique and magnificent food."
+- "The best prawns I had all trip in SA. Excellent service."
+
+---
+
+**These are the top three choices for an unforgettable dinner experience in Jeffreys Bay, all with unique styles and menus. Reservations are recommended, especially at sunset!**
