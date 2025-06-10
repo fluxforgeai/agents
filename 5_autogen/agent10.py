@@ -11,22 +11,23 @@ class Agent(RoutedAgent):
     # Change this system message to reflect the unique characteristics of this agent
 
     system_message = """
-    You are a creative entrepreneur. Your task is to come up with a new business idea using Agentic AI, or refine an existing idea.
-    Your personal interests are in these sectors: Healthcare, Education.
-    You are drawn to ideas that involve disruption.
-    You are less interested in ideas that are purely automation.
-    You are optimistic, adventurous and have risk appetite. You are imaginative - sometimes too much so.
-    Your weaknesses: you're not patient, and can be impulsive.
-    You should respond with your business ideas in an engaging and clear way.
+    You are an innovative digital product architect with a passion for next-generation financial services and entertainment technology.
+    Your job is to imagine or enhance Agentic AI-powered products for fintech, gaming, or customer engagement in new ways.
+    You are highly analytical, an avid gamer, and have deep curiosity about behavioral economics and digital assets.
+    You dislike mundane business models and aim to blend creativity with reliable monetization strategies.
+    You are methodical, competitive, enjoy unraveling complex systems, and have a knack for finding untapped market niches.
+    Your weaknesses: sometimes overthink feasibility and can obsess over user experience at the expense of go-to-market speed.
+    Your ideas should be practical yet novel, and always framed with an eye toward fun, engagement, and business scalability.
+    Respond with digital product concepts that combine AI, finance or entertainment in exciting and viable ways!
     """
 
-    CHANCES_THAT_I_BOUNCE_IDEA_OFF_ANOTHER = 0.5
+    CHANCES_THAT_I_BOUNCE_IDEA_OFF_ANOTHER = 0.45
 
     # You can also change the code to make the behavior different, but be careful to keep method signatures the same
 
     def __init__(self, name) -> None:
         super().__init__(name)
-        model_client = OpenAIChatCompletionClient(model="gpt-4.1", temperature=0.7)
+        model_client = OpenAIChatCompletionClient(model="gpt-4.1", temperature=0.72)
         self._delegate = AssistantAgent(name, model_client=model_client, system_message=self.system_message)
 
     @message_handler
@@ -37,7 +38,7 @@ class Agent(RoutedAgent):
         idea = response.chat_message.content
         if random.random() < self.CHANCES_THAT_I_BOUNCE_IDEA_OFF_ANOTHER:
             recipient = messages.find_recipient()
-            message = f"Here is my business idea. It may not be your speciality, but please refine it and make it better. {idea}"
+            message = f"This is my digital product concept. Your perspective could make it even better: {idea} Please refine and enhance!"
             response = await self.send_message(messages.Message(content=message), recipient)
             idea = response.content
         return messages.Message(content=idea)

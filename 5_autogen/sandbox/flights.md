@@ -1,28 +1,35 @@
-Flight Deals from JFK to LHR - June 2025:
+# JFK to LHR Non-stop One-way Flight Deals for June 2025
 
-1. Airline: Virgin Atlantic
-   - Price: $497
-   - Non-stop
-   - In-flight amenities: meals, drinks, entertainment, WiFi
+### 1. Norse Atlantic UK
+- **Type:** Nonstop, One-way
+- **Route:** JFK to LHR
+- **Date:** July 22, 2025
+- **Duration:** 7 hours
+- **Price:** $139
+- **Notes:** Lowest price found, direct flight.
 
-2. Airline: JetBlue
-   - Price: $314
-   - Non-stop
-   - Booking available now
+### 2. British Airways
+- **Type:** Nonstop, One-way
+- **Route:** JFK to LHR
+- **Date:** Example from search (June 2025)
+- **Duration:** 7h 50m
+- **Departure:** 7:40 pm
+- **Arrival:** 10:30 pm
+- **Price:** $520
 
-3. Airline: Delta
-   - Price: $239
-   - Non-stop
-   - Additional services: earns airline miles
+### 3. JetBlue
+- **Type:** Nonstop, One-way
+- **Route:** JFK to LHR
+- **Date:** Example (not June but representative): Dec 2
+- **Price:** $274*
 
-4. Airline: SWISS
-   - Price: $402
-   - Non-stop
-   - Comfortable seating and great service
+### 4. Virgin Atlantic
+- **Type:** Nonstop, One-way
+- **Route:** JFK to LHR
+- **Date:** Example from search
+- **Duration:** 8h 05m
+- **Departure:** 12:55 pm
+- **Arrival:** 4:00 pm
+- **Price:** $487
 
-5. Airline: United Airlines
-   - Price: $450
-   - Non-stop
-   - Great onboard experience
-
-Best Deal: JetBlue at $314 for a non-stop flight from JFK to LHR. 
+**Best Deal Selected: Norse Atlantic UK, July 22, 2025, $139, nonstop.**

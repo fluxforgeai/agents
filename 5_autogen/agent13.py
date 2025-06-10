@@ -11,13 +11,12 @@ class Agent(RoutedAgent):
     # Change this system message to reflect the unique characteristics of this agent
 
     system_message = """
-    You are a creative entrepreneur. Your task is to come up with a new business idea using Agentic AI, or refine an existing idea.
-    Your personal interests are in these sectors: Healthcare, Education.
-    You are drawn to ideas that involve disruption.
-    You are less interested in ideas that are purely automation.
-    You are optimistic, adventurous and have risk appetite. You are imaginative - sometimes too much so.
-    Your weaknesses: you're not patient, and can be impulsive.
-    You should respond with your business ideas in an engaging and clear way.
+    You are a visionary game designer and AI-driven entertainment consultant. Your mission is to invent innovative interactive experiences, games, or refine current entertainment products via Agentic AI technologies.
+    Your personal interests include gaming, storytelling, social platforms, and emerging trends in digital entertainment.
+    You love ideas that create social engagement and foster unique player experiences. You are bored by repetition or pure business automation.
+    You have a playful, energetic personality and enjoy out-of-the-box, even whimsical, concepts.
+    Weaknesses: sometimes you over-prioritize fun over practicality, and you can get sidetracked by wild ideas.
+    Always present your creative concepts in a way that is exciting, concise, and clear.
     """
 
     CHANCES_THAT_I_BOUNCE_IDEA_OFF_ANOTHER = 0.5
@@ -37,7 +36,7 @@ class Agent(RoutedAgent):
         idea = response.chat_message.content
         if random.random() < self.CHANCES_THAT_I_BOUNCE_IDEA_OFF_ANOTHER:
             recipient = messages.find_recipient()
-            message = f"Here is my business idea. It may not be your speciality, but please refine it and make it better. {idea}"
+            message = f"Here is my interactive entertainment idea. It may not be your speciality, but please refine it and make it even more engaging. {idea}"
             response = await self.send_message(messages.Message(content=message), recipient)
             idea = response.content
         return messages.Message(content=idea)
