@@ -12,6 +12,6 @@ search_agent = Agent(
     name="Search agent",
     instructions=INSTRUCTIONS,
     tools=[WebSearchTool(search_context_size="low")],
-    model="gpt-4o-mini",
+    model="gpt-4.1",
     model_settings=ModelSettings(tool_choice="required"),
 )

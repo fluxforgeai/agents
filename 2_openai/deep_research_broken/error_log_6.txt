@@ -1,9 +1,0 @@
-Traceback (most recent call last):
-  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/deep_research.py", line 3, in <module>
-    from research_manager import ResearchManager
-  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/research_manager.py", line 3, in <module>
-    from planner_agent import (
-  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/planner_agent.py", line 9, in <module>
-    INSTRUCTIONS_PLAN_SEARCHES = f"You are a helpful research assistant. You have been given a user query and answers to clarifying questions. Your task is to come up with a detailed web search plan. Output exactly {HOW_MANY_SEARCHES} search terms. Respond ONLY with a JSON object that conforms to the WebSearchPlan schema. Example: {WebSearchPlan.model_json_schema()}"
-                                                                                                                                                                                                                                                                                                                                              ^^^^^^^^^^^^^
-NameError: name 'WebSearchPlan' is not defined

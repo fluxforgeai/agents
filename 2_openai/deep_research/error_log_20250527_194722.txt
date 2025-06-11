@@ -1,9 +1,0 @@
-Traceback (most recent call last):
-  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/deep_research.py", line 3, in <module>
-    from research_manager import ResearchManager
-  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/research_manager.py", line 5, in <module>
-    from email_agent import email_agent
-  File "/Users/johanjgenis/Projects/agents/2_openai/deep_research/email_agent.py", line 9, in <module>
-    os.environ["SSL_CERT_FILE"] = certifi.where()          # core ssl module
-                                  ^^^^^^^
-NameError: name 'certifi' is not defined
